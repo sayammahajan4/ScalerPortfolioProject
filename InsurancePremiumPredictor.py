@@ -9,32 +9,42 @@ import streamlit as st
 st.header('Insurance-Premium-Price-Prediction', divider='rainbow')
 # df=pd.read_csv("/Users/LENOVO/PycharmProjects/StreamLitTutorial/cars24-car-price-cleaned.csv")
 # st.dataframe(df)
-col1, col2 = st.columns(2)
+col3, col4= st.columns(2)
+
+with col3:
+    Diabetes = st.selectbox(
+        "Does the customer have Diabetes ?",
+        ("Yes", "No"))
 
 
-Diabetes = st.selectbox(
-    "Does the customer have Diabetes ?",
-    ("Yes", "No"))
+with col4:
+    BloodPressureProblems = st.selectbox(
+        "Does the customer have Blood Pressure Problems ?",
+        ("Yes", "No"))
 
-BloodPressureProblems = st.selectbox(
-    "Does the customer have Blood Pressure Problems ?",
-    ("Yes", "No"))
+col5,col6 = st.columns(2)
+with col5:
+    AnyTransplants = st.selectbox(
+        "Did the customer have Any Transplants ?",
+        ("Yes", "No"))
 
-AnyTransplants = st.selectbox(
-    "Did the customer have Any Transplants ?",
-    ("Yes", "No"))
+with col6:
+    AnyChronicDiseases = st.selectbox(
+        "Does the customer have AnyChronic Diseases ?",
+        ("Yes", "No"))
 
-AnyChronicDiseases = st.selectbox(
-    "Does the customer have AnyChronic Diseases ?",
-    ("Yes", "No"))
+col7,col8 = st.columns(2)
 
-KnownAllergies = st.selectbox(
-    "Does the customer have Known Allergies ?",
-    ("Yes", "No"))
+with col7:
+    KnownAllergies = st.selectbox(
+        "Does the customer have Known Allergies ?",
+        ("Yes", "No"))
 
-HistoryOfCancerInFamily = st.selectbox(
-    "Does the customer have History Of Cancer In Family ?",
-    ("Yes", "No"))
+with col8:
+    HistoryOfCancerInFamily = st.selectbox(
+        "Does the customer have History Of Cancer In Family ?",
+        ("Yes", "No"))
+
 
 NumberOfMajorSurgeries = st.selectbox(
     "How many Number Of Major Surgeries did the customer have ?",
